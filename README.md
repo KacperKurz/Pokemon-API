@@ -11,26 +11,21 @@
 <!-- PROJECT LOGO -->
 <br />
 <p align="center">
-  <a href="https://github.com/KacperKurz/repo_name">
-    <img src="images/logo.png" alt="Logo" width="80" height="80">
+  <a href="https://github.com/KacperKurz/Pokemon-API">
   </a>
 
-  <h3 align="center">project_title</h3>
+  <h3 align="center">Pokemon API</h3>
 
   <p align="center">
-    project_description
+    REST API for gen 1 Pokemon created for my java-spring course.
     <br />
-    <a href="https://github.com/KacperKurz/repo_name"><strong>Explore the docs »</strong></a>
+    <a href="https://github.com/KacperKurz/Pokemon-API"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://github.com/KacperKurz/repo_name">View Demo</a>
+    <a href="https://github.com/KacperKurz/Pokemon-API/issues">Report Bug</a>
     ·
-    <a href="https://github.com/KacperKurz/repo_name/issues">Report Bug</a>
-    ·
-    <a href="https://github.com/KacperKurz/repo_name/issues">Request Feature</a>
+    <a href="https://github.com/KacperKurz/Pokemon-API/issues">Request Feature</a>
   </p>
-</p>
-
 
 
 <!-- TABLE OF CONTENTS -->
@@ -51,9 +46,6 @@
       </ul>
     </li>
     <li><a href="#usage">Usage</a></li>
-    <li><a href="#roadmap">Roadmap</a></li>
-    <li><a href="#contributing">Contributing</a></li>
-    <li><a href="#license">License</a></li>
     <li><a href="#contact">Contact</a></li>
     <li><a href="#acknowledgements">Acknowledgements</a></li>
   </ol>
@@ -64,18 +56,13 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
-
-Here's a blank template to get started:
-**To avoid retyping too much info. Do a search and replace with your text editor for the following:**
-`KacperKurz`, `repo_name`, `twitter_handle`, `email`, `project_title`, `project_description`
+![](src/main/resources/Screenshot_20230308_154603.png)
 
 
 ### Built With
 
-* []()
-* []()
-* []()
+* [Java]()
+* [Spring](https://spring.io/)
 
 
 
@@ -86,92 +73,68 @@ To get a local copy up and running follow these simple steps.
 
 ### Prerequisites
 
-This is an example of how to list things you need to use the software and how to install them.
-* npm
-  ```sh
-  npm install npm@latest -g
-  ```
+* Java 11
+* hsqldb
 
 ### Installation
 
 1. Clone the repo
    ```sh
-   git clone https://github.com/KacperKurz/repo_name.git
+   git clone https://github.com/KacperKurz/Pokemon-API.git
    ```
-2. Install NPM packages
-   ```sh
-   npm install
-   ```
+2. Run the database
+    ```shell
+    hsqldb-server --database.0 mem:mydb --dbname.0 workdb
+    ```
+3. Run the application
+    ```shell
+   gradle bootRun
+    ```
 
 
 
 <!-- USAGE EXAMPLES -->
 ## Usage
 
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
+You can see all the entries at http://localhost:8080/web/pokemon/
 
-_For more examples, please refer to the [Documentation](https://example.com)_
+The api is also available at http://localhost:8080/api/pokemon/
 
-
-
-<!-- ROADMAP -->
-## Roadmap
-
-See the [open issues](https://github.com/KacperKurz/repo_name/issues) for a list of proposed features (and known issues).
-
-
-
-<!-- CONTRIBUTING -->
-## Contributing
-
-Contributions are what make the open source community such an amazing place to be learn, inspire, and create. Any contributions you make are **greatly appreciated**.
-
-1. Fork the Project
-2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the Branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
-
-
-
-<!-- LICENSE -->
-## License
-
-Distributed under the MIT License. See `LICENSE` for more information.
-
+The available endpoints are:
+* GET /api/pokemon/ - returns all the entries
+* GET /api/pokemon/byType/{type} - returns all the entries of a given type
+* GET /api/pokemon/{id} - returns a single entry
+* POST /api/pokemon/ - adds a new entry
+* DELETE /api/pokemon/{id} - deletes a single entry
 
 
 <!-- CONTACT -->
 ## Contact
 
-Your Name - [@twitter_handle](https://twitter.com/twitter_handle) - email
+Kacper Kurz - kacperkurz@protonmail.com
 
-Project Link: [https://github.com/KacperKurz/repo_name](https://github.com/KacperKurz/repo_name)
+Project Link: [https://github.com/KacperKurz/Pokemon-API](https://github.com/KacperKurz/Pokemon-API)
 
 
 
 <!-- ACKNOWLEDGEMENTS -->
 ## Acknowledgements
 
-* []()
-* []()
-* []()
-
-
+* [kaggle](https://www.kaggle.com/datasets/dizzypanda/gen-1-pokemon)
 
 
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[contributors-shield]: https://img.shields.io/github/contributors/KacperKurz/repo.svg?style=for-the-badge
-[contributors-url]: https://github.com/KacperKurz/repo/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/KacperKurz/repo.svg?style=for-the-badge
-[forks-url]: https://github.com/KacperKurz/repo/network/members
-[stars-shield]: https://img.shields.io/github/stars/KacperKurz/repo.svg?style=for-the-badge
-[stars-url]: https://github.com/KacperKurz/repo/stargazers
-[issues-shield]: https://img.shields.io/github/issues/KacperKurz/repo.svg?style=for-the-badge
-[issues-url]: https://github.com/KacperKurz/repo/issues
-[license-shield]: https://img.shields.io/github/license/KacperKurz/repo.svg?style=for-the-badge
-[license-url]: https://github.com/KacperKurz/repo/blob/master/LICENSE.txt
+[contributors-shield]: https://img.shields.io/github/contributors/KacperKurz/Pokemon-API.svg?style=for-the-badge
+[contributors-url]: https://github.com/KacperKurz/Pokemon-API/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/KacperKurz/Pokemon-API.svg?style=for-the-badge
+[forks-url]: https://github.com/KacperKurz/Pokemon-API/network/members
+[stars-shield]: https://img.shields.io/github/stars/KacperKurz/Pokemon-API.svg?style=for-the-badge
+[stars-url]: https://github.com/KacperKurz/Pokemon-API/stargazers
+[issues-shield]: https://img.shields.io/github/issues/KacperKurz/Pokemon-API.svg?style=for-the-badge
+[issues-url]: https://github.com/KacperKurz/Pokemon-API/issues
+[license-shield]: https://img.shields.io/github/license/KacperKurz/Pokemon-API.svg?style=for-the-badge
+[license-url]: https://github.com/KacperKurz/Pokemon-API/blob/master/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
-[linkedin-url]: https://linkedin.com/in/KacperKurz
+[linkedin-url]: https://linkedin.com/in/kacper-kurz-175707199/
