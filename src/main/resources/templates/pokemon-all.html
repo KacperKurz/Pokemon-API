@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org"
+>
+<head>
+    <meta charset="UTF-8">
+    <title>All pokemon</title>
+</head>
+<body>
+
+<h2>Pokemon from (in memory) DB</h2>
+
+<div>
+    <a th:href="@{/web/pokemon/form}">New pokemon</a>
+</div>
+<!--id, name, types, type1, type2,height,weight,male_pct,female_pct,catch_rate,exp_points,exp_speed,base_total,hp,attack,defense,special,speed,normal_dmg,fire_dmg,water_dmg,eletric_dmg,grass_dmg,ice_dmg,fight_dmg,poison_dmg,ground_dmg,flying_dmg,psychic_dmg,bug_dmg,rock_dmg,ghost_dmg,dragon_dmg,evolutions,legendary-->
+
+<table>
+    <tr th:each="pokemon : ${pokemon}">
+        <th th:text="${pokemon.id}"></th>
+        <th th:text="${pokemon.name}"></th>
+        <th th:text="${pokemon.type1}"></th>
+        <th th:text="${pokemon.type2}"></th>
+        <th th:text="${pokemon.height}"></th>
+        <th th:text="${pokemon.weight}"></th>
+        <th th:text="${pokemon.male_pct}"></th>
+        <th th:text="${pokemon.female_pct}"></th>
+        <th th:text="${pokemon.catch_rate}"></th>
+        <th th:text="${pokemon.exp_points}"></th>
+        <th th:text="${pokemon.exp_speed}"></th>
+        <th th:text="${pokemon.base_total}"></th>
+        <th th:text="${pokemon.hp}"></th>
+        <th th:text="${pokemon.attack}"></th>
+        <th th:text="${pokemon.defense}"></th>
+        <th th:text="${pokemon.special}"></th>
+        <th th:text="${pokemon.speed}"></th>
+        <th th:text="${pokemon.normal_dmg}"></th>
+        <th th:text="${pokemon.fire_dmg}"></th>
+        <th th:text="${pokemon.water_dmg}"></th>
+        <th th:text="${pokemon.eletric_dmg}"></th>
+        <th th:text="${pokemon.grass_dmg}"></th>
+        <th th:text="${pokemon.ice_dmg}"></th>
+        <th th:text="${pokemon.fight_dmg}"></th>
+        <th th:text="${pokemon.poison_dmg}"></th>
+        <th th:text="${pokemon.ground_dmg}"></th>
+        <th th:text="${pokemon.flying_dmg}"></th>
+        <th th:text="${pokemon.psychic_dmg}"></th>
+        <th th:text="${pokemon.bug_dmg}"></th>
+        <th th:text="${pokemon.rock_dmg}"></th>
+        <th th:text="${pokemon.ghost_dmg}"></th>
+        <th th:text="${pokemon.dragon_dmg}"></th>
+        <th th:text="${pokemon.evolutions}"></th>
+        <th th:text="${pokemon.legendary}"></th>
+
+        <th><a th:href="@{/web/pokemon/delete/{id}(id=${pokemon.getId()})}">Delete</a></th>
+
+    </tr>
+</table>
+
+<!--<div th:if="${successMessage}">-->
+<!--  <div th:text="${successMessage}"></div>-->
+<!--</div>-->
+
+<!--<div th:if="${errorMessage}">-->
+<!--  <div th:text="${errorMessage}"></div>-->
+<!--</div>-->
+
+</body>
+</html>

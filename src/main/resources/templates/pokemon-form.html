@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org"
+>
+<head>
+  <meta charset="UTF-8">
+  <title>Pokemon </title>
+</head>
+<body>
+
+<h2>Edit pokemon</h2>
+
+<form action="#" th:action="@{/web/pokemon}" th:object="${pokemonToAdd}" method="post">
+
+  <div><label>id<input type="number" th:field="*{id}"></label></div>
+  <div><label>name<input type="text" th:field="*{name}"></label></div>
+  <div><label>types<input type="number" th:field="*{types}"></label></div>
+  <div><label>type1<input type="text" th:field="*{type1}"></label></div>
+  <div><label>type2<input type="text" th:field="*{type2}"></label></div>
+  <div><label>height<input type="number" th:field="*{height}"></label></div>
+  <div><label>weight<input type="number" th:field="*{weight}"></label></div>
+  <div><label>male_pct<input type="number" th:field="*{male_pct}"></label></div>
+  <div><label>female_pct<input type="number" th:field="*{female_pct}"></label></div>
+  <div><label>catch_rate<input type="number" th:field="*{catch_rate}"></label></div>
+  <div><label>exp_points<input type="number" th:field="*{exp_points}"></label></div>
+  <div><label>exp_speed<input type="text" th:field="*{exp_speed}"></label></div>
+  <div><label>base_total<input type="number" th:field="*{base_total}"></label></div>
+  <div><label>hp<input type="number" th:field="*{hp}"></label></div>
+  <div><label>attack<input type="number" th:field="*{attack}"></label></div>
+  <div><label>defense<input type="number" th:field="*{defense}"></label></div>
+  <div><label>special<input type="number" th:field="*{special}"></label></div>
+  <div><label>speed<input type="number" th:field="*{speed}"></label></div>
+  <div><label>normal_dmg<input type="number" th:field="*{normal_dmg}"></label></div>
+  <div><label>fire_dmg<input type="number" th:field="*{fire_dmg}"></label></div>
+  <div><label>water_dmg<input type="number" th:field="*{water_dmg}"></label></div>
+  <div><label>eletric_dmg<input type="number" th:field="*{eletric_dmg}"></label></div>
+  <div><label>grass_dmg<input type="number" th:field="*{grass_dmg}"></label></div>
+  <div><label>ice_dmg<input type="number" th:field="*{ice_dmg}"></label></div>
+  <div><label>fight_dmg<input type="number" th:field="*{fight_dmg}"></label></div>
+  <div><label>poison_dmg<input type="number" th:field="*{poison_dmg}"></label></div>
+  <div><label>ground_dmg<input type="number" th:field="*{ground_dmg}"></label></div>
+  <div><label>flying_dmg<input type="number" th:field="*{flying_dmg}"></label></div>
+  <div><label>psychic_dmg<input type="number" th:field="*{psychic_dmg}"></label></div>
+  <div><label>bug_dmg<input type="number" th:field="*{bug_dmg}"></label></div>
+  <div><label>rock_dmg<input type="number" th:field="*{rock_dmg}"></label></div>
+  <div><label>ghost_dmg<input type="number" th:field="*{ghost_dmg}"></label></div>
+  <div><label>dragon_dmg<input type="number" th:field="*{dragon_dmg}"></label></div>
+  <div><label>evolutions<input type="number" th:field="*{evolutions}"></label></div>
+  <div><label>legendary<input type="checkbox" th:field="*{legendary}"></label></div>
+
+  <div><input type="submit" value="Submit"></div>
+
+</form>
+
+<!--<div th:if="${errorMessage}">-->
+<!--  <div th:text="${errorMessage}"></div>-->
+<!--</div>-->
+
+</body>
+</html>
